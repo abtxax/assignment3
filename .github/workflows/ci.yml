@@ -23,21 +23,6 @@ jobs:
       - name: Build Flask Image
         uses: docker/build-push-action@v5
         with:
-          context: ./app
-          file: ./app/Dockerfile
-          push: true
-          tags: abtaha1/flask-api:latest
-
-      - name: Build Nginx Image
-        uses: docker/build-push-action@v5
-        with:
-          context: ./nginx
-          file: ./nginx/Dockerfile
-          push: true
-          tags: abtaha1/nginx-proxy:latest
-      - name: Build Flask Image
-        uses: docker/build-push-action@v5
-        with:
           context: ./app/flask-api
           file: ./app/flask-api/Dockerfile
           push: true
